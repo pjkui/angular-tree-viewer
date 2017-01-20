@@ -39,4 +39,11 @@ phonecatApp.controller('PhoneListController', function PhoneListController($scop
             {"label": "Guest", "id": "role3", "children": []}
         ];
 
+    $scope.$watch( 'abc.currentNode', function( newObj, oldObj ) {
+        if( $scope.abc && angular.isObject($scope.abc.currentNode) ) {
+            console.log( 'Node Selected!!' );
+            console.log( $scope.abc.currentNode );
+        }
+    }, false);
+
 });
