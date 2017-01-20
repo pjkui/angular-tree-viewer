@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="../vendor/angular.treeview/angular.treeview.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="../vendor/angular.treeview/css/angular.treeview.css" />
+
+</head>
+<body ng-controller="PhoneListController">
+
+<ul>
+    <li ng-repeat="phone in phones">
+        <span>{{phone.name}}</span>
+        <p>{{phone.snippet}}</p>
+    </li>
+</ul>
+
+<div
+        data-angular-treeview="true"
+        data-tree-id="abc"
+        data-tree-model="treedata"
+        data-node-id="id"
+        data-node-label="label"
+        data-node-children="children">
+</div>
+
+
+</b3-tree-viewer>
+</body>
+</html>
